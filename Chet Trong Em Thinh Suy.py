@@ -13,10 +13,6 @@ clock = pygame.time.Clock()
 font_path = os.path.join(os.getcwd(), "DFVN-Excalifont.ttf")
 font = pygame.font.Font(font_path, 30)
 
-# ================== LỜI BÀI HÁT "CHẾT TRONG EM" ==================
-# Mỗi dòng: (text, word_delay_ms, line_delay_ms, (R,G,B))
-# word_delay: thời gian giữa các từ (ms) - để tạo cảm giác từ từ hiện ra
-# line_delay: thời gian nghỉ sau khi kết thúc câu (ms)
 lyrics = [
     ("Ở trong góc tường,| có tôi", 600, 3000, (255, 255, 255)),
     ("Ở nơi cuối đường,| có ai không?", 580, 2500, (255, 220, 220)),
@@ -32,9 +28,7 @@ lyrics = [
     ("Chết trong tôi một phần tim nung nấu", 320, 1900, (255, 80, 80)),
     ("Chết trong đêm và tình mãi chết trong đêm", 380, 3500, (255, 100, 100)),
 ]
-# ==============================================================
 
-# GIF nền (giữ nguyên y chang)
 gif_path = os.path.join(os.getcwd(), "cat.gif")
 gif = Image.open(gif_path)
 gif_frames = []
@@ -154,7 +148,7 @@ while running:
     if not line_done and now - last_word_time >= WORD_DELAY:
             current_word = words[word_index]
             
-            # Xử lý dấu | để ngắt nhịp
+        
             if '|' in current_word:
                 current_word = current_word.replace('|', ' ')
                 last_word_time = now - WORD_DELAY + int(WORD_DELAY * 4.5)
