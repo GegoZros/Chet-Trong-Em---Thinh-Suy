@@ -19,8 +19,6 @@ lyrics = [
     ("Đời trôi quá dài,| mất em", 450, 3700, (255, 180, 180)),
     ("Thời như đứng lại,| ngó xem tôi đang lặng im một mình", 350, 6500, (255, 200, 200)),
     ("Ôm thảy hết cô đơn như trong đời ta (ha-há-ha-hà)", 420, 7600 , (255, 150, 150)),
-    
-    # Điệp khúc 1 - mạnh hơn, đau đớn
     ("Chết trong tôi một phần tim thao thức", 470, 2000, (255, 80, 80)),
     ("Chết trên môi một mùi hương chưa dứt", 300, 2000, (255, 80, 80)),
     ("Chết theo em,| bầu trời sấm chớp mây đen", 330, 2500, (255, 100, 100)),
@@ -53,7 +51,6 @@ except EOFError:
 
 gif_index = 0
 
-# Class Sparkle (giữ nguyên)
 class Sparkle:
     def __init__(self, x, y, size):
         self.x = x
